@@ -1,4 +1,4 @@
-require("./timer").time();
+require("../timer").time();
 
 function processId(boxId) {
     let countChecks = {
@@ -26,7 +26,7 @@ const readline = require("readline");
 const fs = require("fs");
 
 const reader = readline.createInterface({
-    input: fs.createReadStream(__dirname + "/../inputs/day02")
+    input: fs.createReadStream(__dirname + "/inputs/day02")
 })
 
 reader.on("line", boxId => {

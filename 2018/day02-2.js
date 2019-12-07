@@ -1,8 +1,8 @@
-require("./timer").time();
+require("../timer").time();
 
 const fs = require("fs");
 
-fs.readFile(__dirname + "/../inputs/day02", (err, data) => {
+fs.readFile(__dirname + "/inputs/day02", (err, data) => {
     if (err) throw err;
     const boxIds = data.toString().split("\n");
 

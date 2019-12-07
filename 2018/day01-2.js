@@ -1,4 +1,4 @@
-require("./timer").time();
+require("../timer").time();
 
 const readline = require("readline");
 const fs = require("fs");
@@ -12,7 +12,7 @@ frequenciesThatHaveBeenSeen.push(frequency);
 
 // Open file
 let reader = readline.createInterface({
-    input: fs.createReadStream(__dirname + "/../inputs/day01")
+    input: fs.createReadStream(__dirname + "/inputs/day01")
 })
 
 function processFile() {

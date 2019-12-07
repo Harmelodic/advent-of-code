@@ -1,4 +1,4 @@
-require("./timer").time();
+require("../timer").time();
 const readline = require("readline");
 const fs = require("fs");
 
@@ -25,7 +25,7 @@ function parseClaim(claimString) {
 const fabricGrid = Array(1001).fill().map(() => new Array(1000).fill(0));
 
 const reader = readline.createInterface({
-    input: fs.createReadStream(__dirname + "/../inputs/day03")
+    input: fs.createReadStream(__dirname + "/inputs/day03")
 })
 
 reader.on("line", claimString => {
@@ -47,7 +47,7 @@ reader.on("close", () => {
     let lonelyClaim = null;
 
     const verificationReader = readline.createInterface({
-        input: fs.createReadStream(__dirname + "/../inputs/day03")
+        input: fs.createReadStream(__dirname + "/inputs/day03")
     })
 
     verificationReader.on("line", claimString => {

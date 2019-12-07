@@ -1,4 +1,4 @@
-require("./timer").time();
+require("../timer").time();
 const readline = require("readline");
 const fs = require("fs");
 
@@ -25,7 +25,7 @@ function parseClaim(claimString) {
 const fabricGrid = Array(1001).fill().map(() => new Array(1000).fill(0));
 
 const reader = readline.createInterface({
-    input: fs.createReadStream(__dirname + "/../inputs/day03")
+    input: fs.createReadStream(__dirname + "/inputs/day03")
 })
 
 reader.on("line", claimString => {
@@ -62,7 +62,7 @@ reader.on("close", () => {
     //     .replace(/0/g, "-") // Zeroes make the claims hard to see, - is easier
     //     .replace("[[", "[\n["); // Prevent line 0 offset
 
-    // fs.writeFile(__dirname + '/../out/day03-1.grid.txt', gridString, (err) => {
+    // fs.writeFile(__dirname + '/out/day03-1.grid.txt', gridString, (err) => {
     //     if (err) throw err;
     // });
     

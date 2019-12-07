@@ -1,4 +1,4 @@
-require("./timer").time();
+require("../timer").time();
 
 const fs = require("fs");
 
@@ -8,7 +8,7 @@ function getRecordDate(recordString) {
     return new Date(parts[0], parts[1] - 1, parts[2], parts[3], parts[4] - 1, 0, 0);
 }
 
-fs.readFile(__dirname + "/../inputs/day04", (err, data) => {
+fs.readFile(__dirname + "/inputs/day04", (err, data) => {
     if (err) throw err;
 
     // Unsorted
@@ -59,12 +59,12 @@ fs.readFile(__dirname + "/../inputs/day04", (err, data) => {
         previousTime = record.date;
     });
 
-    let targetGuard = guardData[0];
-    guardData.forEach(guard => {
-        if (Math.max(...guard.minutesAsleep) > Math.max(...targetGuard.minutesAsleep)) {
-            targetGuard = guard;
-        }
+    guardData.sort((a, b) => {
+        return b.timeAsleep - a.timeAsleep;
     })
 
-    console.log(targetGuard.id * targetGuard.minutesAsleep.indexOf(Math.max(...targetGuard.minutesAsleep)));
+    const targetGuard = guardData[0];
+    const minuteWhenMostAsleep = targetGuard.minutesAsleep.indexOf(Math.max(...targetGuard.minutesAsleep));
+
+    console.log(targetGuard.id * minuteWhenMostAsleep);
 })

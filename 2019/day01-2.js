@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/local/bin/node
 require("../timer").time();
 
 const readline = require("readline");

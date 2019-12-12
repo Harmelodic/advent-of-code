@@ -1,21 +1,18 @@
-#!/usr/local/bin/node
-require("../timer").time();
+#!node
+require('../timer').time();
 
-const readline = require("readline");
-const fs = require("fs");
-
-const reader = readline.createInterface({
-    input: fs.createReadStream(__dirname + "/inputs/day01")
+const reader = require('readline').createInterface({
+    input: require('fs').createReadStream(__dirname + '/inputs/day01')
 })
 
 let totalFuelRequired = 0;
 
-reader.on("line", line => {
+reader.on('line', line => {
     const mass = parseInt(line);
     totalFuelRequired += fuelRequired(mass);
 })
 
-reader.on("close", () => {
+reader.on('close', () => {
     console.log(`Total Fuel Required: ${totalFuelRequired}`);
 })
 

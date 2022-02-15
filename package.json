@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/Harmelodic/advent-of-code.git"
+    "url": "git+https://github.com/Harmelodic/advent-of-code.git"
   },
   "keywords": [
     "Advent",
@@ -19,7 +19,7 @@
   "author": "Harmelodic",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://gitlab.com/Harmelodic/advent-of-code/issues"
+    "url": "https://github.com/Harmelodic/advent-of-code/issues"
   },
-  "homepage": "https://gitlab.com/Harmelodic/advent-of-code#readme"
+  "homepage": "https://github.com/Harmelodic/advent-of-code#readme"
 }
